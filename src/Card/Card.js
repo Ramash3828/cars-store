@@ -3,10 +3,10 @@ import "./Card.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const Card = (props) => {
-    const { cartItems } = props;
-    console.log(cartItems);
+    const { cartItems, onItemDelete } = props;
+
     return (
-        <div className="col-md-4 ">
+        <div className="col-md-4 order-1 order-md-2 ">
             <div className="card m-2 p-3">
                 <h2 className="mb-4">Selected Items</h2>
                 <div className="card-item-area">
@@ -22,7 +22,10 @@ const Card = (props) => {
                                 >
                                     <img src={item.img} alt="" />
                                     <p>{item.name}</p>
-                                    <button className="btn">
+                                    <button
+                                        onClick={() => onItemDelete(item)}
+                                        className="btn"
+                                    >
                                         <DeleteIcon />
                                     </button>
                                 </div>

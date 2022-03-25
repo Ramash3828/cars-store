@@ -6,7 +6,7 @@ const Main = (props) => {
     const { products, onAdd } = props;
 
     return (
-        <div className="col-md-8">
+        <div className="col-md-8 order-2 order-md-1">
             <div className="row main m-2">
                 {products.map((product) => (
                     <Products
