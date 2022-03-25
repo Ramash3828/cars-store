@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const Card = (props) => {
     const { cartItems } = props;
@@ -21,7 +22,9 @@ const Card = (props) => {
                                 >
                                     <img src={item.img} alt="" />
                                     <p>{item.name}</p>
-                                    <p>icon</p>
+                                    <button className="btn">
+                                        <DeleteIcon />
+                                    </button>
                                 </div>
                             );
                         })}

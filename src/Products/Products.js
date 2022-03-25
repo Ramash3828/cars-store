@@ -1,5 +1,6 @@
 import React from "react";
 import "./Products.css";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const Products = (props) => {
     const { products, onAdd } = props;
@@ -17,7 +18,8 @@ const Products = (props) => {
                         onClick={() => onAdd(products)}
                         className="buy btn btn-success"
                     >
-                        Buy
+                        <span className="btn-text">BUY</span>{" "}
+                        <AddShoppingCartIcon />
                     </button>
                     <h3>${products.price}</h3>
                 </div>
