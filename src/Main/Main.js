@@ -4,7 +4,7 @@ import "./Main.css";
 
 const Main = (props) => {
     const { products, onAdd } = props;
-    console.log(products);
+
     return (
         <div className="col-md-8">
             <div className="row main m-2">

@@ -5,10 +5,16 @@ import data from "./fake-data/Data";
 import Main from "./Main/Main";
 function App() {
     const { products } = data;
-    const [cartItems, setCartItem] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
 
     const onAdd = (product) => {
-        console.log("click");
+        const exist = cartItems.find((item) => item.id === product.id);
+        console.log(exist);
+        if (exist) {
+            alert("This product has been added. Try another....");
+        } else {
+            setCartItems([...cartItems, { ...product }]);
+        }
     };
 
     return (
