@@ -1,0 +1,31 @@
+.single-cart {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    background: #868585fd;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.single-cart img {
+    width: 200px;
+
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.img-area {
+    height: 200px;
+    overflow: hidden;
+}
+.add-cart {
+    display: flex;
+    justify-content: space-between;
+}
