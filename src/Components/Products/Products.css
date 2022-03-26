@@ -11,7 +11,7 @@
     -o-border-radius: 10px;
 }
 .single-cart img {
-    width: 200px;
+    width: 180px;
 
     object-fit: cover;
     border: 1px solid #ddd;
