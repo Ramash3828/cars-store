@@ -11,15 +11,20 @@ function App() {
     const { products } = data;
     const [cartItems, setCartItems] = useState([]);
     // Add to product cart
-    const onAdd = (product) => {
-        const exist = cartItems.find((item) => item.id === product.id);
+    let onAdd;
+    if (cartItems.length < 4) {
+        onAdd = (product) => {
+            const exist = cartItems.find((item) => item.id === product.id);
 
-        if (exist) {
-            alert("This product has been added. Try another....");
-        } else {
-            setCartItems([...cartItems, { ...product }]);
-        }
-    };
+            if (exist) {
+                alert("This product has been added. Try another....");
+            } else {
+                setCartItems([...cartItems, { ...product }]);
+            }
+        };
+    } else {
+        alert("Allowed 4 Items only!!!");
+    }
     // Delete Single item from card
     const onItemDelete = (cardPorduct) => {
         const exist = cartItems.find((item) => item.id === cardPorduct.id);
