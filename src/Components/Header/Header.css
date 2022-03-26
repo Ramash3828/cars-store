@@ -11,6 +11,11 @@
     top: 0;
     z-index: 99;
 }
+.logo {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 .navbar a {
     display: inline-block;
     text-decoration: none;
@@ -41,5 +46,8 @@
     }
     .logo {
         margin-bottom: 15px;
+    }
+    .navbar a {
+        padding: 3px 5px;
     }
 }

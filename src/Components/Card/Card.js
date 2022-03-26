@@ -3,7 +3,24 @@ import "./Card.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const Card = (props) => {
-    const { cartItems, onItemDelete } = props;
+    const { cartItems, onItemDelete, setCartItems } = props;
+    // Clear All item from card
+    const onRemoveAll = () => {
+        setCartItems([]);
+    };
+    // Choose One item
+    const onChoose = () => {
+        const getRndInteger = (min, max) => {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
+        const randomNum = getRndInteger(0, cartItems.length - 1);
+        if (cartItems.length > 0) {
+            cartItems.filter((item, index) =>
+                index === randomNum ? setCartItems([item]) : []
+            );
+        }
+    };
 
     return (
         <div className="col-md-4 order-1 order-md-2 position-sticky">
@@ -32,8 +49,15 @@ const Card = (props) => {
                             );
                         })}
                     <div className="d-flex justify-content-between w-75 mx-auto">
-                        <button className="btn btn-success">Choose One</button>
-                        <button className="btn btn-danger">Choose Again</button>
+                        <button onClick={onChoose} className="btn btn-success">
+                            Choose One
+                        </button>
+                        <button
+                            onClick={onRemoveAll}
+                            className="btn btn-danger"
+                        >
+                            Choose Again
+                        </button>
                     </div>
                 </div>
             </div>
