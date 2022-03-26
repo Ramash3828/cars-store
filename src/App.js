@@ -4,7 +4,8 @@ import Card from "./Components/Card/Card";
 import data from "./fake-data/Data";
 
 import Main from "./Components/Main/Main";
-import Header from "./Components/Header/Header";
+import QuestionAnswer from "./Components/Question-Answer/QuestionAnswer";
+
 function App() {
     const { products } = data;
     const [cartItems, setCartItems] = useState([]);
@@ -28,7 +29,6 @@ function App() {
 
     return (
         <div className="App">
-            <Header></Header>
             <h1 className="mb-3">CAR STORES Ltd.</h1>
             <div className="row">
                 <Main onAdd={onAdd} products={products}></Main>
@@ -38,6 +38,7 @@ function App() {
                     cartItems={cartItems}
                 ></Card>
             </div>
+            <QuestionAnswer></QuestionAnswer>
         </div>
     );
 }
