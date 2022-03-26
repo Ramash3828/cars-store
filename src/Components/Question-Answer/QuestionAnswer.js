@@ -3,11 +3,12 @@ import "./QuestionAnswer.css";
 
 const QuestionAnswer = () => {
     return (
-        <div className="row">
+        <div className="row my-5 pb-5">
+            <h2>Question and Answer Section</h2>
             <div className="col-md-4">
                 <div className="q-a-section m-3">
                     <h4>How React js work?</h4>
-                    <p>
+                    <p className="text-start">
                         React reads all objects and uses them to create HTML
                         elements on the virtual DOM. When the state changes,
                         React goes through its virtual DOM, creates a list of
@@ -19,7 +20,7 @@ const QuestionAnswer = () => {
             <div className="col-md-4">
                 <div className="q-a-section m-3">
                     <h4>Props VS state?</h4>
-                    <p>
+                    <p className="text-start">
                         Props are read-only but State changes can be
                         asynchronous. Props allow to pass data from one
                         component to other component but State hols information
@@ -33,7 +34,7 @@ const QuestionAnswer = () => {
             <div className="col-md-4">
                 <div className="q-a-section m-3">
                     <h4>How useState work?</h4>
-                    <p>
+                    <p className="text-start">
                         The State is a updatable structure that is used to
                         contain data the component and can change over time. It
                         is heart of the react component which determines the
