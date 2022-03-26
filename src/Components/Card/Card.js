@@ -23,7 +23,7 @@ const Card = (props) => {
     };
 
     return (
-        <div className="col-md-4 order-1 order-md-2 position-sticky">
+        <div className="col-md-4 order-1 order-md-2 sticky-top  sticky-xl-top">
             <div className="card m-2 p-3">
                 <h2 className="mb-4">Selected Items</h2>
                 <div className="card-item-area">
@@ -48,13 +48,16 @@ const Card = (props) => {
                                 </div>
                             );
                         })}
-                    <div className="d-flex justify-content-between w-75 mx-auto">
-                        <button onClick={onChoose} className="btn btn-success">
+                    <div className="d-flex justify-content-between flex-wrap w-75 mx-auto">
+                        <button
+                            onClick={onChoose}
+                            className="btn btn-success mb-2"
+                        >
                             Choose One
                         </button>
                         <button
                             onClick={onRemoveAll}
-                            className="btn btn-danger"
+                            className="btn btn-danger mb-2"
                         >
                             Choose Again
                         </button>

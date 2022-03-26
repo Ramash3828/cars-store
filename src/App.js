@@ -12,19 +12,20 @@ function App() {
     const [cartItems, setCartItems] = useState([]);
     // Add to product cart
     let onAdd;
-    if (cartItems.length < 4) {
-        onAdd = (product) => {
-            const exist = cartItems.find((item) => item.id === product.id);
 
-            if (exist) {
-                alert("This product has been added. Try another....");
-            } else {
+    onAdd = (product) => {
+        const exist = cartItems.find((item) => item.id === product.id);
+
+        if (exist) {
+            alert("This product has been added. Try another....");
+        } else {
+            if (cartItems.length <= 3) {
                 setCartItems([...cartItems, { ...product }]);
+            } else {
+                alert("Allowed 4 Items only!!!");
             }
-        };
-    } else {
-        alert("Allowed 4 Items only!!!");
-    }
+        }
+    };
     // Delete Single item from card
     const onItemDelete = (cardPorduct) => {
         const exist = cartItems.find((item) => item.id === cardPorduct.id);
@@ -37,7 +38,7 @@ function App() {
         <div className="App wrapper">
             <Header></Header>
             <h1 className="my-3">CAR STORES Ltd.</h1>
-            <div className="row">
+            <div className="row ">
                 <Main onAdd={onAdd} products={products}></Main>
                 <Card
                     onItemDelete={onItemDelete}
