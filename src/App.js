@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import Card from "./Card/Card";
+import Card from "./Components/Card/Card";
 import data from "./fake-data/Data";
-import Main from "./Main/Main";
+
+import Main from "./Components/Main/Main";
 function App() {
     const { products } = data;
     const [cartItems, setCartItems] = useState([]);

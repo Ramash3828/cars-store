@@ -5,8 +5,8 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 const Products = (props) => {
     const { products, onAdd } = props;
     return (
-        <div className="col-md-4">
-            <div className="single-cart">
+        <div className="col-md-4 ">
+            <div className="single-cart shadow">
                 <div className="img-area">
                     <img src={products.img} alt="" />
                 </div>
@@ -16,7 +16,7 @@ const Products = (props) => {
                 <div className="add-cart">
                     <button
                         onClick={() => onAdd(products)}
-                        className="buy btn btn-success"
+                        className="buy btn btn-warning"
                     >
                         <span className="btn-text">BUY</span>{" "}
                         <AddShoppingCartIcon />

@@ -6,7 +6,7 @@ const Card = (props) => {
     const { cartItems, onItemDelete } = props;
 
     return (
-        <div className="col-md-4 order-1 order-md-2 ">
+        <div className="col-md-4 order-1 order-md-2 position-sticky">
             <div className="card m-2 p-3">
                 <h2 className="mb-4">Selected Items</h2>
                 <div className="card-item-area">
